@@ -1,0 +1,26 @@
+<apex:component >
+    Hello this is comp2
+    <div id="myDiv2">
+            <div ng-controller="MyControllerB">
+              <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here"/>
+            <hr/>
+          <h1>Hello {{yourName}}!</h1>
+            {{2+2}}
+            </div>
+       </div>
+    <script>
+    console.log('in comp2 js');
+    	 var moduleB = angular.module("MyModuleB", []);
+          moduleB.controller("MyControllerB", function($scope) {
+              $scope.name = "Steve B";
+          });
+      console.log('in main');
+       angular.element(document).ready(function() {
+           var myDiv1 = document.getElementById("myDiv1");
+           angular.bootstrap(myDiv1, ["MyModuleA", "MyModuleB"]);
+           var myDiv2 = document.getElementById("myDiv2");
+           angular.bootstrap(myDiv2, ["MyModuleB"]);
+       });
+    </script>
+</apex:component>

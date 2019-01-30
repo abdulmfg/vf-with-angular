@@ -1,0 +1,14 @@
+<apex:page sidebar="false" showHeader="false" >
+  <html >
+   <head>
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"/>
+   </head>
+   <body>
+       <c:comp1/>
+       <c:comp2/>
+        <script>
+          
+        </script>
+   </body>
+</html>
+</apex:page>

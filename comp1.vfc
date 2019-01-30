@@ -1,0 +1,19 @@
+<apex:component >
+     <div id="myDiv1" >
+        <div ng-controller="MyControllerA">
+            
+          <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here"/>
+            <hr/>
+          <h1>Hello {{yourName}}!</h1>
+            {{2+2}}
+        </div>
+       </div>
+    <script>
+    console.log('in comp1 js');
+    	var moduleA = angular.module("MyModuleA", []);
+          moduleA.controller("MyControllerA", function($scope) {
+              $scope.name = "Bob A";
+          });
+    </script>
+</apex:component>
